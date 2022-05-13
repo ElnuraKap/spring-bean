@@ -10,5 +10,13 @@ public class App {
         HelloWorld bean =
                 (HelloWorld) applicationContext.getBean("helloworld");
         System.out.println(bean.getMessage());
+
+
+
+        Cat one  = (Cat) applicationContext.getBean("cat");
+        System.out.println(one.getGetMassag());
+        Cat two = (Cat) applicationContext.getBean("cat");
+        System.out.println(two.getGetMassag());
+        System.out.println("Ссылаются ли на один и тод же bean: " + (one == two));
     }
 }
